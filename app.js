@@ -30,7 +30,7 @@ function pickSymbols(n) {
 }
 
 function go(n) {
-	let cards = generate(n);
+	let cards = generate(n).map(card => shuffle(card));
 
 	let symbols = pickSymbols(cards.length);
 	showSymbols(symbols);
