@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+form {
+	display: flex;
+	align-items: center;
+}
+
+[type=submit] {
+	font-size: 120%;
+	font-weight: bold;
+	margin-left: 4px;
+}
+
+aside:empty { display: none; }
+
+aside {
+	margin: 1em 0;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+
+aside span {
+	font-size: 150%;
+	margin: 0 0.2em;
+}
+
+.card {
+	width: calc(var(--radius) * 2px);
+	height: calc(var(--radius) * 2px);
+	border-radius: 50%;
+	float: left;
+	border: 2px solid black;
+	position: relative;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+
+.card > * {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: calc(var(--radius) * 0.3px);
+}
+
+@page {
+	margin: 0.3cm;
+}
+
+
+@media print {
+	header, aside { display: none; }
+
+	.card {
+		page-break-inside: avoid;
+	}
+}
