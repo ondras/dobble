@@ -12,5 +12,4 @@ export async function init() {
 			all.push(String.fromCodePoint(i));
 		}
 	});
-	console.log(all)
 }

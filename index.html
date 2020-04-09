@@ -9,16 +9,31 @@
 			<h1>Dobble / Spot it! with Emoji</h1>
 			<p>By <a href="https://ondras.zarovi.cz/">Ondřej Žára</a>, 2020</p>
 			<form>
-				<label>
-					<span>Images per card:</span>
-					<select name="n">
-						<option value="2">3</option>
-						<option value="3">4</option>
-						<option selected="selected" value="5">6 (kids version)</option>
-						<option value="7">8 (regular version)</option>
-						<option value="11">12</option>
-					</select>
-				</label>
+				<div>
+					<label>
+						<span>Images per card:</span>
+						<select name="n">
+							<option value="1">2</option>
+							<option value="2">3</option>
+							<option value="3">4</option>
+							<option value="4">5</option>
+							<option selected="selected" value="5">6 (kids version)</option>
+							<option value="7">8 (regular version)</option>
+							<option value="8">9</option>
+							<option value="9">10</option>
+							<option value="11">12</option>
+							<option value="13">14</option>
+						</select>
+					</label>
+					<label>
+						<span>Visual style:</span>
+						<select name="style">
+							<option selected="selected" value="text">Native Emoji</option>
+							<option value="twitter">Twitter Emoji</option>
+							<option value="openmoji">OpenMoji</option>
+						</select>
+					</label>
+				</div>
 				<button type="submit">Generate</button>
 			</form>
 		</header>

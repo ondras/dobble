@@ -11,10 +11,21 @@ form {
 	align-items: center;
 }
 
+form div {
+	display: flex;
+	flex-direction: column;
+}
+
+form label span {
+	display: inline-block;
+	width: 9em;
+	line-height: 1.5;
+}
+
 [type=submit] {
-	font-size: 120%;
+	font-size: 150%;
 	font-weight: bold;
-	margin-left: 4px;
+	margin-left: 0.5em;
 }
 
 aside:empty { display: none; }
@@ -25,10 +36,12 @@ aside {
 	border-bottom: 1px solid gray;
 }
 
-aside span {
+aside .symbol {
 	font-size: 150%;
 	margin: 0 0.2em;
 }
+
+img.symbol { height: 1em; }
 
 .card {
 	width: calc(var(--radius) * 2px);
@@ -41,7 +54,7 @@ aside span {
 	margin-bottom: 1em;
 }
 
-.card > * {
+.card .symbol {
 	position: absolute;
 	left: 50%;
 	top: 50%;
