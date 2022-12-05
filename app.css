@@ -11,7 +11,7 @@ form {
 	align-items: center;
 }
 
-form div {
+form > div {
 	display: flex;
 	flex-direction: column;
 }
@@ -20,6 +20,17 @@ form label span {
 	display: inline-block;
 	width: 9em;
 	line-height: 1.5;
+}
+
+form #drop-images {
+	margin-top: 0.5em;
+	border: 2px dashed dodgerblue;
+	padding: 0.5em;
+	min-height: 2em;
+}
+
+form #drop-images img {
+	max-width: 32px;
 }
 
 [type=submit] {

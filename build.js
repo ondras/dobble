@@ -1,8 +1,11 @@
 import { RADIUS } from "./conf.js";
+import * as custom from "./custom.js";
+
 
 export function symbol(symbol, style) {
 	let node;
-	let hex = symbol.codePointAt(0).toString(16);
+	let hex = 0;
+	if (style != "custom") { hex = symbol.codePointAt(0).toString(16); }
 
 	switch (style) {
 		case "twitter":
@@ -13,6 +16,11 @@ export function symbol(symbol, style) {
 		case "openmoji":
 			node = new Image();
 			node.src = `https://cdn.jsdelivr.net/npm/openmoji@latest/color/svg/${hex.toUpperCase()}.svg`;
+		break;
+
+		case "custom":
+			node = new Image();
+			node.src = custom.images[symbol];
 		break;
 
 		default:

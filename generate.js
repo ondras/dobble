@@ -1,5 +1,6 @@
 import * as math from "./math.js";
 
+
 export default function generate(N) {
 	let cards = [];
 
